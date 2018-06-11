@@ -5,5 +5,4 @@ install:
   - cd iubar-desktop-api-client
   - mvn install -f pom_travis.xml  
 script: 
-  - cd presenze-client-test
   - mvn -f pom_travis.xml clean verify
