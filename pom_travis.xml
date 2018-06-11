@@ -51,7 +51,7 @@
   <dependency>
 	<groupId>it.iubar.desktop.api</groupId>
 	<artifactId>iubar-desktop-api</artifactId>
-	<version>1.0</version>
+	<version>0.0.1-SNAPSHOT</version>
 </dependency>
 
 <!--
