@@ -4,7 +4,7 @@ install: true # The install step runs before script step, and with Maven you don
 script: 
   - git clone https://github.com/iubar/iubar-desktop-api-client.git
   - cd iubar-desktop-api-client
-  - mvn install
+  - mvn install -f pom_travis.xml
   - cd ..
   - cd presenze-client-test
   - mvn -f pom_travis.xml clean verify
