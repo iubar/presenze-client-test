@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: iubar.presenze_api_test.ImpresaTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.942 s - in iubar.presenze_api_test.ImpresaTest

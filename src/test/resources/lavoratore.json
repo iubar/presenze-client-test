@@ -1,0 +1,21 @@
+	{
+        "nome": "ALESSANDRO",
+        "cognome": "DAMONTE",
+        "cf": "DMNLSN95P14D969J",
+        "idcontrattodettaglio": 105,
+        "piva": "99999999999",
+        "dataassunzione": "2016-03-09",
+        "orario": {
+            "settimana": {
+                "venerdi": 8,
+                "mercoledi": 8,
+                "lunedi": 8,
+                "giovedi": 8,
+                "sabato": 0,
+                "domenica": 0,
+                "martedi": 8
+            },
+            "giornoriposo": "domenica",
+            "giornozeroore": "sabato"
+        }
+	}

@@ -1,0 +1,39 @@
+[
+        {
+            "nome": "MARVELIS",
+            "cognome": "PEREAJORGE",
+            "cf": "PRJMVL50S50Z504W",
+            "idcontrattodettaglio": 501,
+            "piva": "99999999999",
+            "dataassunzione": "2015-07-15",
+            "orario": {
+                "settimana": {
+                    "venerdi": 8,
+                    "mercoledi": 8,
+                    "lunedi": 8,
+                    "giovedi": 8,
+                    "sabato": 0,
+                    "domenica": 0,
+                    "martedi": 8
+                },
+                "giornoriposo": "domenica",
+                "giornozeroore": "sabato"
+            }
+        },
+        {
+            "nome": "CINZIA",
+            "cognome": "VENTURINO",
+            "cf": "VNTCNZ70P58I480Y",
+            "idcontrattodettaglio": 118,
+            "piva": "99999999999",
+            "dataassunzione": "2005-01-18"
+        },
+        {
+            "nome": "ORIANA",
+            "cognome": "BURGASSI",
+            "cf": "BRGRNO59R44D969V",
+            "idcontrattodettaglio": 118,
+            "piva": "99999999999",
+            "dataassunzione": "1994-01-07"
+        }
+    ]

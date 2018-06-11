@@ -1,0 +1,6 @@
+language: java
+sudo: false
+git clone https://github.com/iubar/iubar-desktop-api-client.git
+mvn install
+install: true # The install step runs before script step, and with Maven you don't usually need the install step, at least I personally haven't ever found it useful — Maven will download dependencies on script step anyway
+script: mvn -f pom_travis.xml clean verify
