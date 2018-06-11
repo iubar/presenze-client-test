@@ -3,13 +3,19 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>iubar</groupId>
-  <artifactId>presenze-api-test</artifactId>
+  <artifactId>presenze-client-test</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>presenze-api-test</name>
   <url>http://maven.apache.org</url>
-
+	
+ 	<parent>
+ 		<groupId>it.iubar.pom</groupId>
+ 		<artifactId>iubar-pom</artifactId>
+ 		<version>0.0.6</version>
+ 	</parent>
+	
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
@@ -80,4 +86,16 @@
 <!-- 		</repository> -->
 
   </repositories>
+	
+	
+
+	</dependencies>
+
+	<scm>
+  	<tag>${project.version}</tag>
+	<connection>scm:git:git://github.com/iubar/${project.artifactId}.git</connection> 
+	<developerConnection>scm:git:git://github.com/iubar/${project.artifactId}.git</developerConnection> 
+	<url>https://github.com/iubar/${project.artifactId}-client</url>
+	</scm>
+
 </project>
