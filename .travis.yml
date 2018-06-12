@@ -5,4 +5,4 @@ install:
   - cd iubar-desktop-api-client
   - mvn -f pom_travis.xml install
 script: 
-  - mvn -f pom_travis.xml clean verify
+  - mvn -f pom_travis.xml package
