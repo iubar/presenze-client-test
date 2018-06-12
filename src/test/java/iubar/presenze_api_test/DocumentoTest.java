@@ -16,9 +16,9 @@ import org.junit.Test;
 
 import it.iubar.desktop.api.JwtClient;
 
-public class Documento {
+public class DocumentoTest {
 	
-	private static final Logger LOGGER = Logger.getLogger(AssenzaTest.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(DocumentoTest.class.getName());
 	
 	@Test
 	public void sendCaricamentoDocumento()
