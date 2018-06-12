@@ -3,6 +3,6 @@ sudo: false
 install:
   - git clone https://github.com/iubar/iubar-desktop-api-client.git
   - cd iubar-desktop-api-client
-  - mvn install -f pom_travis.xml  
+  - mvn -f pom_travis.xml install
 script: 
   - mvn -f pom_travis.xml clean verify
