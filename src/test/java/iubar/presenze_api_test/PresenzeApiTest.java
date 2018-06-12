@@ -5,8 +5,8 @@ import it.iubar.desktop.api.JwtClient;
 public class PresenzeApiTest
 {
 	public static final String BASE_ROUTE = "http://presenze.iubar.it/api/v1/";
-	public static String user = System.getenv("JWT_USER");
-	public static String apiKey = System.getenv("JWT_APIKEY");
+	public static String user = System.getenv("JWT_USER_PRESENZE");
+	public static String apiKey = System.getenv("JWT_APIKEY_PRESENZE");
 	public static final String PIVA = "99999999999";
 	
 	protected  static JwtClient clientFactory() {
