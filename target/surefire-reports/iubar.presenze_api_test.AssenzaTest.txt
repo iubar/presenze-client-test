@@ -1,4 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: iubar.presenze_api_test.AssenzaTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.678 s - in iubar.presenze_api_test.AssenzaTest
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.144 s <<< FAILURE! - in iubar.presenze_api_test.AssenzaTest
+receiveElencoPerImpresa(iubar.presenze_api_test.AssenzaTest)  Time elapsed: 0.116 s  <<< ERROR!
+java.lang.IllegalArgumentException: The Secret cannot be null
+	at iubar.presenze_api_test.AssenzaTest.receiveElencoPerImpresa(AssenzaTest.java:30)
+
+receiveElencoPerLavoratore(iubar.presenze_api_test.AssenzaTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalArgumentException: The Secret cannot be null
+	at iubar.presenze_api_test.AssenzaTest.receiveElencoPerLavoratore(AssenzaTest.java:66)
+
