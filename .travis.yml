@@ -3,6 +3,6 @@ sudo: false
 install:
   - git clone https://github.com/iubar/iubar-desktop-api-client.git
   - cd iubar-desktop-api-client
-  - mvn -f pom_travis.xml -DskipTests install # see: https://stackoverflow.com/questions/25639336/whats-the-difference-between-dskiptests-and-dmaven-test-skip-true
+  - mvn -B -f pom_travis.xml install -DskipTests # see: https://stackoverflow.com/questions/25639336/whats-the-difference-between-dskiptests-and-dmaven-test-skip-true
 script: 
-  - mvn -f pom_travis.xml package
+  - mvn -B -f pom_travis.xml package
