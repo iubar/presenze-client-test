@@ -20,7 +20,7 @@ public class DocumentoTest {
 	
 	private static final Logger LOGGER = Logger.getLogger(DocumentoTest.class.getName());
 	
-	@Test
+	// Ignorato perchè caricare un pdf ogni volta che viene lanciato un test richiederebbe troppe risorse
 	public void sendCaricamentoDocumento()
 	{
 		JwtClient client = PresenzeApiTest.clientFactory();
