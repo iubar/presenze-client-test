@@ -1,7 +1,7 @@
 package iubar.presenze_api_test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.io.InputStream;
 import java.util.logging.Logger;
@@ -12,7 +12,6 @@ import javax.ws.rs.core.Response.Status;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONTokener;
-import org.junit.Test;
 
 import it.iubar.desktop.api.JwtClient;
 
