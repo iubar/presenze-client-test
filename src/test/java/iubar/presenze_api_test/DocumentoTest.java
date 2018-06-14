@@ -2,6 +2,7 @@ package iubar.presenze_api_test;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Disabled;
 
 import java.io.InputStream;
 import java.util.logging.Logger;
@@ -19,7 +20,7 @@ public class DocumentoTest {
 	
 	private static final Logger LOGGER = Logger.getLogger(DocumentoTest.class.getName());
 	
-	@Ignore("Ignorato perchè caricare un pdf ogni volta che viene lanciato un test richiederebbe troppe risorse")
+	@Disabled("Ignorato perchè caricare un pdf ogni volta che viene lanciato un test richiederebbe troppe risorse")
 	public void sendCaricamentoDocumento()
 	{
 		JwtClient client = PresenzeApiTest.clientFactory();
