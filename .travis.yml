@@ -1,9 +1,10 @@
+# https://docs.travis-ci.com/user/customizing-the-build
 language: java
 sudo: false
-install: 
+install: true
+script:  
   - git clone https://github.com/iubar/iubar-desktop-api-client.git
   - cd iubar-desktop-api-client
-  - mvn -B -f pom_travis.xml -DskipTests -Dmaven.test.skip=true -Dmaven.test.skip.exec=true install # see: https://stackoverflow.com/questions/25639336/whats-the-difference-between-dskiptests-and-dmaven-test-skip-true
-script:  
-#  - cd ..
+  - mvn -B -f pom_travis.xml -DskipTests install # see: https://stackoverflow.com/questions/25639336/whats-the-difference-between-dskiptests-and-dmaven-test-skip-true
+  - cd ..
   - mvn -B -f pom_travis.xml package
