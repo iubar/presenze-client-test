@@ -1,6 +1,9 @@
 package iubar.presenze_api_test;
 
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.fail;
+
 import org.junit.jupiter.api.Disabled;
 
 
@@ -13,7 +16,11 @@ public class DocumentoTest {
 		String path = "documento/upload";
 		String jsonFileName = "documento.json";
 		
-		HttpMethods.send(path, jsonFileName, true);
+		try {
+			HttpMethods.send(path, jsonFileName, true);
+		} catch (Exception e) {
+			fail();
+		}
 	}
 	
 	@Test
@@ -21,7 +28,11 @@ public class DocumentoTest {
 		int id_doc = 67;
 		String path = "documento/" + id_doc;
 
-		HttpMethods.receive(path);
+		try {
+			HttpMethods.receive(path);
+		} catch (Exception e) {
+			fail();
+		}
 	}
 	
 	@Test
@@ -29,6 +40,10 @@ public class DocumentoTest {
 		int id_tipo_doc = 1;
 		String path = "documenti/tipodocumento/" + id_tipo_doc;
 
-		HttpMethods.receive(path);
+		try {
+			HttpMethods.receive(path);
+		} catch (Exception e) {
+			fail();
+		}
 	}
 }

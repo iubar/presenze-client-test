@@ -1,6 +1,7 @@
 
 package iubar.presenze_api_test;
 
+import static org.junit.jupiter.api.Assertions.fail;
 import org.junit.jupiter.api.Test;
 
 public class ImpresaTest {
@@ -17,7 +18,11 @@ public class ImpresaTest {
 		String path = "impresa";
 		String jsonFileName = "impresa.json";
 		
-		HttpMethods.send(path, jsonFileName, true);
+		try {
+			HttpMethods.send(path, jsonFileName, true);
+		} catch (Exception e) {
+			fail();
+		}
 	}
 	
 	@Test

@@ -1,5 +1,7 @@
 package iubar.presenze_api_test;
 
+import static org.junit.jupiter.api.Assertions.fail;
+
 import org.junit.jupiter.api.Test;
 
 public class StatsTest {
@@ -10,7 +12,11 @@ public class StatsTest {
 		String path = "stats/cedolini";
 		String jsonFileName = "statistiche-cedolino.json";
 		
-		HttpMethods.send(path, jsonFileName, false);
+		try{
+			HttpMethods.send(path, jsonFileName, false);
+		}catch (Exception e) {
+			fail();
+		}
 	}
 	
 	@Test
@@ -20,6 +26,10 @@ public class StatsTest {
 		String anno = "2017";
 		String path = "stats/cedolini/mese/" + mese +"/anno/" + anno;
 
-		HttpMethods.receive(path);
+		try {
+			HttpMethods.receive(path);
+		} catch (Exception e) {
+			fail();
+		}
 	}
 }

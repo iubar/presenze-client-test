@@ -1,5 +1,7 @@
 package iubar.presenze_api_test;
 
+import static org.junit.jupiter.api.Assertions.fail;
+
 import org.junit.jupiter.api.Test;
 
 public class UserTest {	
@@ -8,7 +10,11 @@ public class UserTest {
 	{
 		String path = "user/validate";
 
-		HttpMethods.receive(path);
+		try {
+			HttpMethods.receive(path);
+		} catch (Exception e) {
+			fail();
+		}
 	}
 
 }
