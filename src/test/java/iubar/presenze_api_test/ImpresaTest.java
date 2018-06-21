@@ -10,7 +10,11 @@ public class ImpresaTest {
 	public void receiveDatiImpresa() {
 		String path = "imprese";
 
-		HttpMethods.receive(path);
+		try {
+			HttpMethods.receive(path);
+		} catch (Exception e) {
+			fail();
+		}
 	}
 	
 	@Test
@@ -29,6 +33,10 @@ public class ImpresaTest {
 	public void receiveElencoImpresa() {
 		String path = "imprese";
 
-		HttpMethods.receive(path);
+		try {
+			HttpMethods.receive(path);
+		} catch (Exception e) {
+			fail();
+		}
 	}
 }
