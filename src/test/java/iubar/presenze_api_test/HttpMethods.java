@@ -18,15 +18,9 @@ import it.iubar.desktop.api.JwtClient;
 
 public class HttpMethods {
 	private static final Logger LOGGER = Logger.getLogger(HttpMethods.class.getName());
-	
-	public static void receive(String path)
+
+	private static void httpResponse(Response response, String restUrl)
 	{
-		JwtClient client = PresenzeApiTest.clientFactory();
-
-		String restUrl = PresenzeApiTest.BASE_ROUTE + path;
-		
-		Response response = client.get(restUrl);
-
 		LOGGER.info("Testing path \"" + restUrl + "\" ...");
 
 		int statusCode = response.getStatus();
@@ -47,8 +41,18 @@ public class HttpMethods {
 		assertEquals(Status.OK.getStatusCode(), statusCode);
 		assertEquals(Status.OK.getStatusCode(), code);
 	}
+	public static void receive(String path)
+	{
+		JwtClient client = PresenzeApiTest.clientFactory();
+
+		String restUrl = PresenzeApiTest.BASE_ROUTE + path;
+		
+		Response response = client.get(restUrl);
+		
+		HttpMethods.httpResponse(response, restUrl);
+	}	
 	
-	public static JSONObject getObjectInput(InputStream inputJson)
+	private static JSONObject getObjectInput(InputStream inputJson)
 	{
 		JSONObject input = null;
 			
@@ -62,7 +66,7 @@ public class HttpMethods {
 		return input;
 	}
 	
-	public static JSONArray getArrayInput(InputStream inputJson)
+	private static JSONArray getArrayInput(InputStream inputJson)
 	{
 		JSONArray input = null;
 			
@@ -96,26 +100,6 @@ public class HttpMethods {
 			response = client.post(restUrl, HttpMethods.getArrayInput(inputJson));
 		}
 		
-		
-		
-		LOGGER.info("Testing path \"" + restUrl + "\" ...");
-
-		int statusCode = response.getStatus();
-		String json = response.readEntity(String.class);
-		JSONObject jsonObject = null;
-		String message = null;
-		int code = 0;
-		try {
-			jsonObject = new JSONObject(json);
-			LOGGER.info("...response: " + jsonObject.toString() + "\n");
-			message = jsonObject.getString("response");
-			code = jsonObject.getInt("code");
-		} catch (JSONException e) {
-			e.printStackTrace();
-		}
-
-		assertNotNull(message);
-		assertEquals(Status.OK.getStatusCode(), statusCode);
-		assertEquals(Status.OK.getStatusCode(), code);
+		HttpMethods.httpResponse(response, restUrl);
 	}
 }
